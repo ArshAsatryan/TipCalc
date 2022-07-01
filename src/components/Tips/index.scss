@@ -1,0 +1,76 @@
+@import '../../_variables';
+
+.basic-tip {
+    &__container {
+        padding: 11px 20px;
+        font-size: 18px;
+        background-color: $veryDarkCyan;
+        border-radius: 5px;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        min-width: 60px;
+        cursor: pointer;
+        &:hover {
+            background-color: $lightGrayishCyan;
+            color: $veryDarkCyan
+        }
+    }
+}
+.basic-tip__color{
+    padding: 11px 20px;
+    font-size: 18px;
+    background-color: $strongCyan;
+    border-radius: 5px;
+    color: $veryDarkCyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    min-width: 60px;
+    cursor: pointer;
+}
+
+.custom-tip {
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 102px;
+        // padding: 10px 20px;
+        font-size: 18px;
+        background-color: $veryLightGrayishCyan;
+        border-radius: 5px;
+        color: $veryDarkCyan;
+        height: 100%;
+        cursor: pointer;
+                & > input {
+                    max-width: 90px;
+                    height: 100%;
+                    background-color: $veryLightGrayishCyan;
+                    color: $veryDarkCyan;
+                    font-family: "Space Mono";
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 18px;
+                }
+                & > input::placeholder {
+                    color: $darkGrayishCyan;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                & > input:focus {
+                    outline-color: $strongCyan;
+                    cursor: pointer;
+                    font-family: "Space Mono";
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $veryDarkCyan;
+                    text-align: right;
+                    
+                }
+    }   
+}

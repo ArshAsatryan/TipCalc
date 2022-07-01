@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import './_variables';
+
+*{
+    padding: 0;
+    
+}
+body {
+    font-family: "Space Mono";
+    font-size: 24px;
+    background-color: $lightGrayishCyan;   
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.basic-input {
+    border: none;
+}
+
+.border-none {
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: $veryLightGrayishCyan;
+   
+    font-family: "Space Mono";
+    font-weight: bold;
+    height: 100%;
+    text-align: right;
+}
+
+.grouped-border {
+    & > input::placeholder{
+        color: $grayishCyan;
+    }
+    &:hover {
+        border: 2px solid $strongCyan;
+        box-sizing: border-box; 
+        
+    }
+}    
+
+.App {
+    height: 350px;
+    
+}
+.container {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 40px 20px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+
+/* TODO: move to separate file*/
+
+.container__billing {
+    width: 100%;
+    &__tips-container {
+        display: flex;
+        max-width: 350px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+
+// rigth side container
+.container__result {
+    background-color: $veryDarkCyan;
+    width: 100%;
+    min-height: 100%;
+    color: $veryLightGrayishCyan;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    margin: 0 20px;
+    
+      &__amount-container {
+        width: 100%;   
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row nowrap;
+        align-items: center;
+            & > div {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-end;
+               
+                & > :nth-child(1){
+                   margin: 0;
+                }
+                & > span {
+                    font-size: 12px;
+                    color: $grayishCyan;
+                }
+            }
+            & > span {
+                color: $strongCyan;
+                font-weight: bold;
+            }
+      }
+      &__btn-reset {
+        background-color: $strongCyan;
+        color: $veryDarkCyan;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 35px;
+        min-width: 80%;
+        cursor: pointer;
+        &:hover {
+            background-color: $lightGrayishCyan;
+            color: $veryDarkCyan;
+        }
+        
+      }
+      &__btn-disable {
+        background-color: $darkGrayishCyan;
+        color: $veryDarkCyan;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 35px;
+        min-width: 80%;
+        opacity: 0.6;
+        
+      }
+}
+
+
+
+
